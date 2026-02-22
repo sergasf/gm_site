@@ -3,22 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>South Bear Studio | Дизайн и Оснащение</title>
+    <title>South Bear Studio | Дизайн интерьера</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600&display=swap');
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; background-color: #fcfcfc; }
         
-        /* Сетка для Hero */
-        .hero-img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(20%) brightness(0.6); }
-
-        /* Контейнеры для видео под ваши размеры */
+        .hero-img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6); }
+        
+        /* Контейнеры под ваши форматы */
         .video-horizontal { aspect-ratio: 16/9; width: 100%; border-radius: 1.5rem; overflow: hidden; background: #000; }
         .video-square { aspect-ratio: 1/1; width: 100%; max-width: 500px; border-radius: 1.5rem; overflow: hidden; background: #000; margin: 0 auto; }
         .video-vertical { aspect-ratio: 3/4; width: 100%; max-width: 400px; border-radius: 1.5rem; overflow: hidden; background: #000; margin: 0 auto; }
 
         video { width: 100%; height: 100%; object-fit: cover; }
-
         .gallery-img { transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); object-fit: cover; width: 100%; height: 100%; }
         .gallery-img:hover { transform: scale(1.04); }
         
@@ -31,113 +29,94 @@
     <nav class="fixed top-0 z-50 w-full bg-white/90 backdrop-blur-md border-b border-stone-100">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center gap-4">
-                <img src="photos/logo.jpg" alt="Logo" class="h-8 md:h-10 object-contain">
+                <img src="photos/logo.png" alt="Logo" class="h-8 md:h-10 object-contain">
                 <span class="font-bold tracking-[0.2em] text-[10px] md:text-xs uppercase">South Bear Studio</span>
             </div>
             <div class="hidden md:flex space-x-8 font-medium uppercase text-[10px] tracking-widest text-stone-500">
-                <a href="#furniture" class="hover:text-amber-900 transition">Мебель</a>
-                <a href="#tech" class="hover:text-amber-900 transition">Технологии</a>
+                <a href="#interior" class="hover:text-amber-900 transition">Интерьер</a>
+                <a href="#sofas" class="hover:text-amber-900 transition">Диваны</a>
+                <a href="#kitchen" class="hover:text-amber-900 transition">Кухни</a>
                 <a href="#materials" class="hover:text-amber-900 transition">Материалы</a>
             </div>
         </div>
     </nav>
 
-    <header class="relative h-[90vh] flex items-center justify-center bg-stone-950 overflow-hidden">
+    <header id="interior" class="relative h-[90vh] flex items-center justify-center bg-stone-950 overflow-hidden">
         <div class="absolute inset-0 grid grid-cols-1 md:grid-cols-2">
-            <img src="photos/interior.webp" class="hero-img" alt="Interior Vertical">
-            <img src="photos/interior2.jpg" class="hero-img hidden md:block" alt="Interior Wide">
+            <img src="photos/Интерьер/interior.webp" class="hero-img" alt="Interior 1">
+            <img src="photos/Интерьер/interior2.jpg" class="hero-img hidden md:block" alt="Interior 2">
         </div>
-        <div class="absolute inset-0 bg-black/30"></div>
         <div class="relative text-center px-6">
             <h1 class="text-6xl md:text-9xl font-extralight text-white mb-4 tracking-tighter uppercase">South Bear</h1>
-            <p class="text-amber-500/80 text-xs md:text-sm uppercase tracking-[0.7em] font-light">Architectural Interior Solutions</p>
+            <p class="text-amber-500/80 text-xs md:text-sm uppercase tracking-[0.7em] font-light">Interior Design Solutions</p>
         </div>
     </header>
 
     <main class="container mx-auto px-6">
 
-        <section id="furniture" class="py-32 fade-in">
+        <section id="sofas" class="py-32 fade-in">
+            <h2 class="text-4xl font-light uppercase tracking-tight mb-16">Диваны</h2>
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-                <div class="lg:col-span-5 space-y-8">
-                    <h2 class="text-5xl font-light uppercase tracking-tight">Living <br>Collection</h2>
+                <div class="lg:col-span-5 space-y-8 text-center lg:text-left">
                     <div class="video-square shadow-2xl">
-                        <video controls playsinline><source src="photos/sofa-video.mp4" type="video/mp4"></video>
+                        <video controls playsinline><source src="photos/Диваны/sofa-video.mp4" type="video/mp4"></video>
                     </div>
-                    <p class="text-stone-500 text-lg font-light leading-relaxed">Квадратные формы и выверенная эргономика. Наши диваны — это баланс между функциональностью и чистым искусством.</p>
+                    <p class="text-stone-500 text-lg font-light leading-relaxed px-4 lg:px-0">Масштабируемые решения для комфорта вашей гостиной.</p>
                 </div>
-                <div class="lg:col-span-7 grid grid-cols-2 gap-4 h-full">
-                    <div class="rounded-3xl overflow-hidden h-80 lg:h-[500px]"><img src="photos/sofa_cass.jpg" class="gallery-img"></div>
-                    <div class="grid grid-rows-2 gap-4">
-                        <div class="rounded-3xl overflow-hidden"><img src="photos/sofa1.jpg" class="gallery-img"></div>
-                        <div class="rounded-3xl overflow-hidden"><img src="photos/sofa2.jpg" class="gallery-img"></div>
-                    </div>
+                <div class="lg:col-span-7 grid grid-cols-2 gap-4">
+                    <div class="rounded-3xl overflow-hidden h-64 lg:h-[400px] col-span-2"><img src="photos/Диваны/sofa_cass.jpg" class="gallery-img"></div>
+                    <div class="rounded-3xl overflow-hidden h-48 lg:h-64"><img src="photos/Диваны/sofa1.jpg" class="gallery-img"></div>
+                    <div class="rounded-3xl overflow-hidden h-48 lg:h-64"><img src="photos/Диваны/sofa2.jpg" class="gallery-img"></div>
+                    <div class="rounded-3xl overflow-hidden h-48 lg:h-64"><img src="photos/Диваны/sofa3.jpg" class="gallery-img"></div>
+                    <div class="rounded-3xl overflow-hidden h-48 lg:h-64"><img src="photos/Диваны/sofa4.jpg" class="gallery-img"></div>
                 </div>
             </div>
         </section>
 
         <section class="py-20 fade-in bg-stone-50 -mx-6 px-6 rounded-[4rem]">
+            <h2 class="text-center text-2xl font-light uppercase tracking-[0.4em] mb-16 opacity-60 text-stone-900">Кресла</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
-                <div class="space-y-4 text-center">
-                    <div class="aspect-square rounded-full overflow-hidden shadow-xl border-4 border-white"><img src="photos/chair1.jpg" class="gallery-img"></div>
-                    <span class="text-[10px] uppercase tracking-widest opacity-40">Series A1</span>
-                </div>
-                <div class="space-y-4 text-center">
-                    <div class="aspect-square rounded-full overflow-hidden shadow-xl border-4 border-white"><img src="photos/chair2.jpg" class="gallery-img"></div>
-                    <span class="text-[10px] uppercase tracking-widest opacity-40">Series A2</span>
-                </div>
-                <div class="space-y-4 text-center">
-                    <div class="aspect-square rounded-full overflow-hidden shadow-xl border-4 border-white"><img src="photos/chair3.jpg" class="gallery-img"></div>
-                    <span class="text-[10px] uppercase tracking-widest opacity-40">Series A3</span>
-                </div>
-                <div class="space-y-4 text-center">
-                    <div class="aspect-square rounded-full overflow-hidden shadow-xl border-4 border-white"><img src="photos/chair4.jpg" class="gallery-img"></div>
-                    <span class="text-[10px] uppercase tracking-widest opacity-40">Series A4</span>
-                </div>
+                <div class="aspect-square rounded-full overflow-hidden shadow-xl border-4 border-white"><img src="photos/Кресла/chair1.jpg" class="gallery-img"></div>
+                <div class="aspect-square rounded-full overflow-hidden shadow-xl border-4 border-white"><img src="photos/Кресла/chair2.jpg" class="gallery-img"></div>
+                <div class="aspect-square rounded-full overflow-hidden shadow-xl border-4 border-white"><img src="photos/Кресла/chair3.jpg" class="gallery-img"></div>
+                <div class="aspect-square rounded-full overflow-hidden shadow-xl border-4 border-white"><img src="photos/Кресла/chair4.jpg" class="gallery-img"></div>
             </div>
         </section>
 
-        <section id="tech" class="py-32 fade-in">
+        <section id="kitchen" class="py-32 fade-in">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div class="flex justify-center order-2 lg:order-1">
-                    <div class="video-vertical shadow-2xl border-[12px] border-white">
-                        <video controls playsinline><source src="photos/kitchen-lift.mp4" type="video/mp4"></video>
+                    <div class="video-vertical shadow-2xl">
+                        <video controls playsinline><source src="photos/Кухни/kitchen-lift.mp4" type="video/mp4"></video>
                     </div>
                 </div>
-                <div class="space-y-8 order-1 lg:order-2">
-                    <h2 class="text-4xl font-light uppercase tracking-widest">Smart Storage</h2>
-                    <p class="text-stone-400 text-xl font-light italic">"Порядок, возведенный в абсолют."</p>
+                <div class="space-y-12 order-1 lg:order-2 text-center lg:text-left">
+                    <div class="space-y-4">
+                        <h2 class="text-5xl font-light uppercase tracking-tight">Кухни и <br>Шкафы</h2>
+                        <div class="h-1 w-20 bg-amber-900 mx-auto lg:mx-0"></div>
+                    </div>
                     <div class="grid grid-cols-2 gap-4">
-                        <div class="rounded-2xl overflow-hidden h-64 shadow-lg"><img src="photos/wardrobe1.jpg" class="gallery-img" alt="Vertical Wardrobe"></div>
-                        <div class="rounded-2xl overflow-hidden h-64 shadow-lg"><img src="photos/bed1.webp" class="gallery-img" alt="Square Bed"></div>
+                        <div class="rounded-3xl overflow-hidden h-64 shadow-lg"><img src="photos/Шкафы/wardrobe1.jpg" class="gallery-img" alt="Шкаф"></div>
+                        <div class="rounded-3xl overflow-hidden h-64 shadow-lg"><img src="photos/Кровати/bed1.webp" class="gallery-img" alt="Кровать"></div>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="materials" class="py-32 fade-in border-t border-stone-100">
-            <h2 class="text-center text-3xl font-light uppercase tracking-[0.3em] mb-20">Texture & Quality</h2>
+            <h2 class="text-center text-3xl font-light uppercase tracking-[0.3em] mb-20">Материалы</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div class="space-y-4">
-                    <div class="video-horizontal shadow-lg"><video controls><source src="photos/wood-tech.mp4" type="video/mp4"></video></div>
-                    <p class="text-center text-xs uppercase tracking-widest opacity-50">Natural Wood Architecture</p>
-                </div>
-                <div class="space-y-4">
-                    <div class="video-horizontal shadow-lg"><video controls><source src="photos/leather-tech.mp4" type="video/mp4"></video></div>
-                    <p class="text-center text-xs uppercase tracking-widest opacity-50">Premium Leather Selection</p>
-                </div>
+                <div class="video-horizontal shadow-lg"><video controls><source src="photos/Материалы/wood-tech.mp4" type="video/mp4"></video></div>
+                <div class="video-horizontal shadow-lg"><video controls><source src="photos/Материалы/leather-tech.mp4" type="video/mp4"></video></div>
             </div>
         </section>
 
     </main>
 
-    <footer class="bg-stone-950 text-stone-600 py-24 text-center">
+    <footer class="bg-stone-900 text-stone-500 py-24 text-center">
         <div class="container mx-auto px-6">
             <h2 class="text-white text-2xl font-light tracking-[0.5em] mb-8 uppercase">South Bear Studio</h2>
-            <div class="h-[1px] w-12 bg-amber-900 mx-auto mb-12"></div>
-            <p class="max-w-md mx-auto text-[10px] leading-relaxed uppercase tracking-widest opacity-40">
-                Design • Technology • Comfort<br>
-                All Rights Reserved 2026
-            </p>
+            <p class="max-w-md mx-auto text-[10px] leading-relaxed uppercase tracking-widest opacity-40">Design • Technology • Comfort</p>
         </div>
     </footer>
 
