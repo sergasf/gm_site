@@ -31,7 +31,6 @@ def generate():
     translate = {
         'beds': 'Кровати',
         'chairs': 'Кресла',
-        'interioir': 'Интерьер', # с учетом вашей опечатки в названии папки
         'interior': 'Интерьер',
         'kitchen': 'Кухни',
         'materials': 'Материалы',
@@ -76,8 +75,8 @@ def generate():
 
     <header class="relative h-screen flex items-center justify-center bg-stone-950 overflow-hidden">
         <div class="absolute inset-0 grid grid-cols-2 opacity-40">
-            <img src="photos/interioir/interior.webp" class="w-full h-full object-cover" alt="Hero 1">
-            <img src="photos/interioir/interior2.jpg" class="w-full h-full object-cover" alt="Hero 2">
+            <img src="photos/interoir/interior.webp" class="w-full h-full object-cover" alt="Hero 1">
+            <img src="photos/interoir/interior2.jpg" class="w-full h-full object-cover" alt="Hero 2">
         </div>
         <div class="absolute inset-0 bg-black/20"></div>
         <div class="relative text-center px-6">
