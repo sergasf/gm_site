@@ -3,133 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Студия Дизайна Интерьера</title>
+    <title>ВЛАД ДИЗАЙН | Студия интерьеров в Гуанчжоу</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
-        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 0.75rem; }
-        .gallery-img { transition: transform 0.3s ease; height: 100%; width: 100%; object-fit: cover; }
-        .gallery-img:hover { transform: scale(1.03); }
-        .hero-clip { clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600&display=swap');
+        
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        
+        /* Стили для видео */
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 1rem;
+        }
+
+        .video-wrapper {
+            position: relative;
+            aspect-ratio: 16/9;
+            background: #1c1917;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+        }
+
+        .gallery-img { transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+        .gallery-img:hover { transform: scale(1.02); filter: brightness(1.1); }
+        
+        .fade-in { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
     </style>
 </head>
-<body class="bg-stone-50 text-stone-900 font-sans">
+<body class="bg-[#fcfaf8] text-stone-900">
 
-    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-stone-200">
+    <nav class="fixed top-0 z-50 w-full bg-white/80 backdrop-blur-lg border-b border-stone-100">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <img src="photos/logo.jpg" alt="Logo" class="h-10 w-auto">
+            <div class="flex items-center gap-3">
+                <img src="photos/logo.jpg" alt="Logo" class="h-8 md:h-10 rounded-sm">
+                <span class="font-semibold tracking-[0.2em] text-xs md:text-sm uppercase">South Bear Studio</span>
+            </div>
             <div class="hidden md:flex space-x-8 font-medium uppercase text-[10px] tracking-[0.2em]">
-                <a href="#sofas" class="hover:text-amber-700 transition">Диваны</a>
-                <a href="#chairs" class="hover:text-amber-700 transition">Кресла</a>
-                <a href="#bedroom" class="hover:text-amber-700 transition">Проекты</a>
+                <a href="#sofas" class="hover:text-amber-700 transition">Мебель</a>
+                <a href="#tech" class="hover:text-amber-700 transition">Технологии</a>
                 <a href="#materials" class="hover:text-amber-700 transition">Материалы</a>
             </div>
         </div>
     </nav>
 
-    <header class="relative h-[80vh] flex items-center justify-center overflow-hidden bg-stone-900">
-        <div class="absolute inset-0 grid grid-cols-2 gap-1">
-            <img src="photos/interior.webp" alt="Interior 1" class="w-full h-full object-cover opacity-70">
-            <img src="photos/interior2.jpg" alt="Interior 2" class="w-full h-full object-cover opacity-70">
+    <header class="relative h-[85vh] flex items-center justify-center bg-stone-900 overflow-hidden">
+        <div class="absolute inset-0 grid grid-cols-2">
+            <img src="photos/interior.webp" class="w-full h-full object-cover opacity-60" alt="Interior 1">
+            <img src="photos/interior2.jpg" class="w-full h-full object-cover opacity-60" alt="Interior 2">
         </div>
-        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-stone-900/60"></div>
-        <div class="relative text-center text-white px-4">
-            <h1 class="text-5xl md:text-8xl font-extralight mb-6 tracking-tighter">South Bear Studio</h1>
-            <p class="text-sm md:text-lg font-light uppercase tracking-[0.5em] opacity-80">Эстетика • Качество • Инновации</p>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-transparent to-transparent"></div>
+        <div class="relative text-center px-4">
+            <h1 class="text-6xl md:text-9xl font-extralight text-white mb-6 tracking-tighter">ВЛАД ДИЗАЙН</h1>
+            <p class="text-white/70 text-xs md:text-sm uppercase tracking-[0.6em]">Guangzhou • Interior Design Studio</p>
         </div>
     </header>
 
     <main class="container mx-auto px-6 py-20">
 
-        <section id="sofas" class="mb-24">
-            <div class="flex items-end justify-between mb-12">
-                <h2 class="text-4xl font-light tracking-tight uppercase">Коллекция <br><span class="text-amber-800 font-normal">мягкой мебели</span></h2>
-                <span class="text-stone-400 text-sm tracking-widest mb-2">01 / 04</span>
+        <section id="sofas" class="mb-32 fade-in">
+            <div class="flex items-end justify-between mb-16">
+                <h2 class="text-4xl font-light tracking-tight uppercase">Коллекция <br><span class="text-amber-800 font-normal">Мягкой мебели</span></h2>
+                <div class="hidden md:block h-[1px] flex-grow mx-10 bg-stone-200"></div>
             </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="md:col-span-2 md:row-span-2 overflow-hidden rounded-2xl">
-                    <img src="photos/sofa_cass.jpg" class="gallery-img" alt="Sofa Main">
-                </div>
-                <div class="overflow-hidden rounded-2xl h-48 md:h-64">
-                    <img src="photos/sofa1.jpg" class="gallery-img" alt="Sofa 1">
-                </div>
-                <div class="overflow-hidden rounded-2xl h-48 md:h-64">
-                    <img src="photos/sofa2.jpg" class="gallery-img" alt="Sofa 2">
-                </div>
-                <div class="overflow-hidden rounded-2xl h-48 md:h-64">
-                    <img src="photos/sofa3.jpg" class="gallery-img" alt="Sofa 3">
-                </div>
-                <div class="overflow-hidden rounded-2xl h-48 md:h-64">
-                    <img src="photos/sofa4.jpg" class="gallery-img" alt="Sofa 4">
-                </div>
-            </div>
-            
-            <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                <div class="video-container shadow-2xl rounded-2xl overflow-hidden">
-                    <iframe src="https://vkvideo.ru/video_ext.php?oid=-215327661&id=456239021&hash=6f383e206087d70c" allow="autoplay; encrypted-media; fullscreen;" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="space-y-4">
-                    <h3 class="text-2xl font-light">Механизмы трансформации</h3>
-                    <p class="text-stone-500 leading-relaxed font-light">Наши диваны оснащены передовыми системами, обеспечивающими плавность хода и долговечность. Каждый элемент продуман до мелочей.</p>
-                </div>
-            </div>
-        </section>
 
-        <section id="chairs" class="mb-24 bg-stone-100 -mx-6 px-6 py-20">
-            <h2 class="text-3xl font-light mb-12 uppercase tracking-widest text-center">Акцентные кресла</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <img src="photos/chair1.jpg" class="rounded-full aspect-square object-cover shadow-xl border-4 border-white gallery-img" alt="Chair 1">
-                <img src="photos/chair2.jpg" class="rounded-full aspect-square object-cover shadow-xl border-4 border-white gallery-img" alt="Chair 2">
-                <img src="photos/chair3.jpg" class="rounded-full aspect-square object-cover shadow-xl border-4 border-white gallery-img" alt="Chair 3">
-                <img src="photos/chair4.jpg" class="rounded-full aspect-square object-cover shadow-xl border-4 border-white gallery-img" alt="Chair 4">
-            </div>
-        </section>
-
-        <section id="bedroom" class="mb-24">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="md:col-span-1 space-y-6">
-                    <h2 class="text-4xl font-light uppercase tracking-tighter">Системы <br>Хранения</h2>
-                    <img src="photos/wardrobe1.jpg" class="rounded-3xl w-full shadow-lg" alt="Wardrobe">
-                    <div class="bg-amber-50 p-8 rounded-3xl">
-                        <p class="text-amber-900 font-light italic">"Мы создаем пространство, которое работает на вас, а не наоборот."</p>
-                    </div>
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                <div class="md:col-span-8 overflow-hidden rounded-3xl group">
+                    <img src="photos/sofa_cass.jpg" class="gallery-img w-full h-[500px] object-cover" alt="Sofa Premium">
                 </div>
-                <div class="md:col-span-2 space-y-8">
-                    <img src="photos/bed1.webp" class="rounded-3xl w-full h-[400px] object-cover shadow-lg" alt="Bed">
-                    <div class="video-container rounded-3xl shadow-xl">
-                        <iframe src="https://vkvideo.ru/video_ext.php?oid=-215327661&id=456239022&hash=063f68388427f7a0" allow="autoplay; encrypted-media; fullscreen;" frameborder="0" allowfullscreen></iframe>
+                <div class="md:col-span-4 grid grid-cols-2 md:grid-cols-1 gap-6">
+                    <img src="photos/sofa1.jpg" class="gallery-img rounded-3xl h-full object-cover" alt="Sofa 1">
+                    <img src="photos/sofa2.jpg" class="gallery-img rounded-3xl h-full object-cover" alt="Sofa 2">
+                </div>
+            </div>
+
+            <div class="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="video-wrapper">
+                    <video controls poster="photos/sofa3.jpg">
+                        <source src="photos/выдвижной диван.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="space-y-6">
+                    <p class="text-stone-400 uppercase tracking-widest text-xs">Функциональность</p>
+                    <h3 class="text-3xl font-light">Механика комфорта</h3>
+                    <p class="text-stone-500 leading-relaxed font-light text-lg">
+                        Мы интегрируем современные системы трансформации, которые превращают дизайнерский объект в полноценное место для отдыха за секунды.
+                    </p>
+                    <div class="grid grid-cols-3 gap-4">
+                        <img src="photos/sofa4.jpg" class="rounded-xl gallery-img h-24 object-cover" alt="Sofa 4">
+                        <img src="photos/sofa5.jpg" class="rounded-xl gallery-img h-24 object-cover" alt="Sofa 5">
+                        <img src="photos/sofa3.jpg" class="rounded-xl gallery-img h-24 object-cover" alt="Sofa 3">
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="materials" class="mb-24 border-t border-stone-200 pt-20">
-            <h2 class="text-2xl font-light mb-12 text-center uppercase tracking-[0.3em]">Качество материалов</h2>
+        <section class="mb-32 fade-in">
+            <div class="bg-stone-100 rounded-[3rem] px-8 py-20">
+                <h2 class="text-2xl font-light mb-16 text-center uppercase tracking-[0.3em]">Акцентные модели</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div class="text-center space-y-4">
+                        <img src="photos/chair1.jpg" class="w-full aspect-square rounded-full object-cover border-8 border-white shadow-xl" alt="Chair 1">
+                        <p class="text-[10px] uppercase tracking-widest text-stone-400 italic">Serenity</p>
+                    </div>
+                    <div class="text-center space-y-4">
+                        <img src="photos/chair2.jpg" class="w-full aspect-square rounded-full object-cover border-8 border-white shadow-xl" alt="Chair 2">
+                        <p class="text-[10px] uppercase tracking-widest text-stone-400 italic">Elegance</p>
+                    </div>
+                    <div class="text-center space-y-4">
+                        <img src="photos/chair3.jpg" class="w-full aspect-square rounded-full object-cover border-8 border-white shadow-xl" alt="Chair 3">
+                        <p class="text-[10px] uppercase tracking-widest text-stone-400 italic">Modern</p>
+                    </div>
+                    <div class="text-center space-y-4">
+                        <img src="photos/chair4.jpg" class="w-full aspect-square rounded-full object-cover border-8 border-white shadow-xl" alt="Chair 4">
+                        <p class="text-[10px] uppercase tracking-widest text-stone-400 italic">Minimal</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tech" class="mb-32 fade-in">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1">
+                    <div class="video-wrapper shadow-[-20px_20px_60px_rgba(0,0,0,0.1)]">
+                        <video controls>
+                            <source src="photos/Видео-выдвижной лифт для посуды.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2 space-y-8">
+                    <h2 class="text-4xl font-light uppercase tracking-tight">Smart <br>Storage</h2>
+                    <p class="text-stone-500 text-lg font-light leading-relaxed">
+                        Кухонные системы с электроприводом. Мы оптимизируем каждый сантиметр, внедряя скрытые лифты и выдвижные модули для безупречного порядка.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <img src="photos/wardrobe1.jpg" class="rounded-2xl shadow-md h-48 w-full object-cover" alt="Wardrobe">
+                        <img src="photos/bed1.webp" class="rounded-2xl shadow-md h-48 w-full object-cover" alt="Bed">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="materials" class="mb-32 fade-in border-t border-stone-200 pt-24">
+            <h2 class="text-center text-3xl font-light uppercase tracking-[0.4em] mb-20">Природа материалов</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div class="space-y-4">
-                    <div class="video-container rounded-xl overflow-hidden shadow-lg">
-                        <iframe src="https://vkvideo.ru/video_ext.php?oid=-236174882&id=456239018&hash=f670081d69d7a9b3" allow="autoplay; encrypted-media; fullscreen;" frameborder="0" allowfullscreen></iframe>
+                <div class="group cursor-pointer">
+                    <div class="video-wrapper mb-6 overflow-hidden">
+                        <video controls class="group-hover:scale-105 transition-transform duration-700">
+                            <source src="photos/видеоОДревесине.mp4" type="video/mp4">
+                        </video>
                     </div>
-                    <p class="text-sm font-medium uppercase tracking-widest text-stone-400">Натуральная древесина</p>
+                    <div class="flex justify-between items-center">
+                        <h4 class="text-lg font-light uppercase tracking-widest">Текстуры дерева</h4>
+                        <span class="text-stone-300 text-xs italic">Экологичность</span>
+                    </div>
                 </div>
-                <div class="space-y-4">
-                    <div class="video-container rounded-xl overflow-hidden shadow-lg">
-                        <iframe src="https://vkvideo.ru/video_ext.php?oid=-236174882&id=456239017&hash=5a9d2d0c242a969f" allow="autoplay; encrypted-media; fullscreen;" frameborder="0" allowfullscreen></iframe>
+                <div class="group cursor-pointer">
+                    <div class="video-wrapper mb-6 overflow-hidden">
+                        <video controls class="group-hover:scale-105 transition-transform duration-700">
+                            <source src="photos/кожа для мебели.mp4" type="video/mp4">
+                        </video>
                     </div>
-                    <p class="text-sm font-medium uppercase tracking-widest text-stone-400">Премиальная кожа</p>
+                    <div class="flex justify-between items-center">
+                        <h4 class="text-lg font-light uppercase tracking-widest">Премиальная кожа</h4>
+                        <span class="text-stone-300 text-xs italic">Долговечность</span>
+                    </div>
                 </div>
             </div>
         </section>
 
     </main>
 
-    <footer class="bg-stone-900 text-stone-500 py-16 text-center border-t border-stone-800">
-        <div class="container mx-auto px-6">
-            <h2 class="text-white text-2xl font-light mb-8 tracking-[0.2em]">South Bear Studio</h2>
-            <p class="max-w-md mx-auto text-sm leading-relaxed mb-8 opacity-60">Создание исключительных интерьеров с использованием передовых технологий и лучших материалов мира.</p>
-            <p class="uppercase tracking-widest text-[10px]">&copy; 2026 Все права защищены</p>
+    <footer class="bg-stone-900 text-stone-500 py-20 border-t border-stone-800">
+        <div class="container mx-auto px-6 text-center">
+            <div class="mb-12">
+                <h2 class="text-white text-3xl font-light tracking-[0.3em] mb-4 uppercase">VLAD DESIGN</h2>
+                <div class="h-1 w-12 bg-amber-800 mx-auto"></div>
+            </div>
+            <p class="max-w-xl mx-auto text-sm leading-loose mb-12 opacity-50 font-light italic">
+                От концепции до реализации. Работаем с лучшими фабриками Китая и Европы, создавая интерьеры, которые вдохновляют.
+            </p>
+            <div class="flex justify-center space-x-8 text-[10px] uppercase tracking-widest opacity-40">
+                <span>Guangzhou, China</span>
+                <span>South Bear Studio</span>
+                <span>2026</span>
+            </div>
         </div>
     </footer>
 
+    <script>
+        // Скрипт для плавного появления блоков при скролле
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
