@@ -3,153 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>South Bear Studio | Дизайн интерьера</title>
+    <title>SOUTH BEAR STUDIO | CATALOG</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600&display=swap');
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; background-color: #fcfcfc; }
-        
-        .hero-img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6); }
-        
-        /* Видео-контейнеры */
-        .video-horizontal { aspect-ratio: 16/9; width: 100%; border-radius: 1.5rem; overflow: hidden; background: #000; }
-        .video-square { aspect-ratio: 1/1; width: 100%; max-width: 500px; border-radius: 1.5rem; overflow: hidden; background: #000; margin: 0 auto; }
-        .video-vertical { aspect-ratio: 3/4; width: 100%; max-width: 400px; border-radius: 1.5rem; overflow: hidden; background: #000; margin: 0 auto; }
-
-        video { width: 100%; height: 100%; object-fit: cover; }
-        .gallery-img { transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); object-fit: cover; width: 100%; height: 100%; }
-        .gallery-img:hover { transform: scale(1.04); }
-        
+        body { font-family: 'Inter', sans-serif; background: #fafafa; scroll-behavior: smooth; }
         .fade-in { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
         .fade-in.visible { opacity: 1; transform: translateY(0); }
     </style>
 </head>
-<body class="text-stone-900">
-
-    <nav class="fixed top-0 z-50 w-full bg-white/90 backdrop-blur-md border-b border-stone-100">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-4">
-                <img src="photos/logo.png" alt="Logo" class="h-8 md:h-10 object-contain">
-                <span class="font-bold tracking-[0.2em] text-[10px] md:text-xs uppercase">South Bear Studio</span>
-            </div>
-            <div class="hidden md:flex space-x-8 font-medium uppercase text-[10px] tracking-widest text-stone-500">
-                <a href="#interior" class="hover:text-amber-900 transition">Интерьер</a>
-                <a href="#sofas" class="hover:text-amber-900 transition">Диваны</a>
-                <a href="#kitchen" class="hover:text-amber-900 transition">Кухни</a>
-                <a href="#materials" class="hover:text-amber-900 transition">Материалы</a>
-            </div>
-        </div>
+<body class="text-stone-800">
+    <nav class="fixed top-0 z-50 w-full bg-white/90 backdrop-blur-md border-b border-stone-100 py-6 px-10 flex justify-between items-center">
+        <span class="font-bold tracking-[0.4em] text-sm">SOUTH BEAR STUDIO</span>
+        <ul class="hidden md:flex space-x-8 text-[11px] font-medium tracking-widest text-stone-400">
+            <li><a href="#beds" class="hover:text-black transition-colors">BEDS</a></li><li><a href="#chairs" class="hover:text-black transition-colors">CHAIRS</a></li><li><a href="#interior" class="hover:text-black transition-colors">INTERIOR</a></li><li><a href="#kitchen" class="hover:text-black transition-colors">KITCHEN</a></li><li><a href="#materials" class="hover:text-black transition-colors">MATERIALS</a></li><li><a href="#portfolio" class="hover:text-black transition-colors">PORTFOLIO</a></li><li><a href="#sofas" class="hover:text-black transition-colors">SOFAS</a></li><li><a href="#wardrobes" class="hover:text-black transition-colors">WARDROBES</a></li>
+        </ul>
     </nav>
-
-    <header id="interior" class="relative h-[90vh] flex items-center justify-center bg-stone-950 overflow-hidden">
-        <div class="absolute inset-0 grid grid-cols-1 md:grid-cols-2">
-            <img src="photos/interioir/interior.webp" class="hero-img" alt="Interior 1">
-            <img src="photos/interioir/interior2.jpg" class="hero-img hidden md:block" alt="Interior 2">
-        </div>
-        <div class="absolute inset-0 bg-black/20"></div>
-        <div class="relative text-center px-6">
-            <h1 class="text-6xl md:text-9xl font-extralight text-white mb-4 tracking-tighter uppercase">South Bear</h1>
-            <p class="text-amber-500/80 text-xs md:text-sm uppercase tracking-[0.7em] font-light">Bespoke Interior Solutions</p>
-        </div>
-    </header>
-
-    <main class="container mx-auto px-6">
-
-        <section id="sofas" class="py-32 fade-in">
-            <h2 class="text-4xl font-light uppercase tracking-tight mb-16">Sofas</h2>
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-                <div class="lg:col-span-5 space-y-8">
-                    <div class="video-square shadow-2xl">
-                        <video controls playsinline><source src="photos/sofas/sofa-video.mp4" type="video/mp4"></video>
-                    </div>
-                    <p class="text-stone-500 text-lg font-light leading-relaxed">Чистота линий и максимальная функциональность. Каждое изделие — это синтез комфорта и современной архитектуры.</p>
-                </div>
-                <div class="lg:col-span-7 grid grid-cols-2 gap-4">
-                    <div class="rounded-3xl overflow-hidden h-64 lg:h-[400px] col-span-2 shadow-lg">
-                        <img src="photos/sofas/sofa_cass.jpg" class="gallery-img" alt="Sofa Cass">
-                    </div>
-                    <div class="rounded-3xl overflow-hidden h-48 lg:h-64 shadow-md">
-                        <img src="photos/sofas/sofa1.jpg" class="gallery-img" alt="Sofa 1">
-                    </div>
-                    <div class="rounded-3xl overflow-hidden h-48 lg:h-64 shadow-md">
-                        <img src="photos/sofas/sofa2.jpg" class="gallery-img" alt="Sofa 2">
-                    </div>
-                    <div class="rounded-3xl overflow-hidden h-48 lg:h-64 shadow-md">
-                        <img src="photos/sofas/sofa3.jpg" class="gallery-img" alt="Sofa 3">
-                    </div>
-                    <div class="rounded-3xl overflow-hidden h-48 lg:h-64 shadow-md">
-                        <img src="photos/sofas/sofa4.jpg" class="gallery-img" alt="Sofa 4">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-24 fade-in bg-stone-50 -mx-6 px-6 rounded-[5rem] mb-32">
-            <h2 class="text-center text-2xl font-light uppercase tracking-[0.4em] mb-16 opacity-40">Chairs</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
-                <div class="aspect-square rounded-full overflow-hidden shadow-xl border-4 border-white"><img src="photos/chairs/chair1.jpg" class="gallery-img"></div>
-                <div class="aspect-square rounded-full overflow-hidden shadow-xl border-4 border-white"><img src="photos/chairs/chair2.jpg" class="gallery-img"></div>
-                <div class="aspect-square rounded-full overflow-hidden shadow-xl border-4 border-white"><img src="photos/chairs/chair3.jpg" class="gallery-img"></div>
-                <div class="aspect-square rounded-full overflow-hidden shadow-xl border-4 border-white"><img src="photos/chairs/chair4.jpg" class="gallery-img"></div>
-            </div>
-        </section>
-
-        <section id="kitchen" class="py-32 fade-in">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-                <div class="flex justify-center order-2 lg:order-1">
-                    <div class="video-vertical shadow-2xl">
-                        <video controls playsinline><source src="photos/kitchen/kitchen-lift.mp4" type="video/mp4"></video>
-                    </div>
-                </div>
-                <div class="space-y-12 order-1 lg:order-2">
-                    <div class="space-y-4">
-                        <h2 class="text-5xl font-light uppercase tracking-tight leading-tight">Smart <br>Kitchen Solutions</h2>
-                        <div class="h-1 w-24 bg-amber-900"></div>
-                    </div>
-                    <p class="text-stone-500 text-xl font-light leading-relaxed">Скрытые системы хранения и вертикальная автоматизация. Технологии, которые делают жизнь проще, оставаясь невидимыми.</p>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="rounded-3xl overflow-hidden h-64 shadow-lg">
-                            <img src="photos/wardrobes/wardrobe1.jpg" class="gallery-img" alt="Wardrobe">
-                        </div>
-                        <div class="rounded-3xl overflow-hidden h-64 shadow-lg">
-                            <img src="photos/beds/bed1.webp" class="gallery-img" alt="Bed">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="materials" class="py-40 fade-in border-t border-stone-200">
-            <h2 class="text-center text-3xl font-light uppercase tracking-[0.5em] mb-20">Materials</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
-                <div class="space-y-6">
-                    <div class="video-horizontal shadow-xl"><video controls><source src="photos/materials/wood-tech.mp4" type="video/mp4"></video></div>
-                    <p class="text-center text-xs uppercase tracking-widest opacity-40 italic">Sustainable Wood</p>
-                </div>
-                <div class="space-y-6">
-                    <div class="video-horizontal shadow-xl"><video controls><source src="photos/materials/leather-tech.mp4" type="video/mp4"></video></div>
-                    <p class="text-center text-xs uppercase tracking-widest opacity-40 italic">Premium Leather</p>
-                </div>
-            </div>
-        </section>
-
+    <main class="container mx-auto px-6 pt-32 pb-20">
+        <section id="beds" class="mb-32 fade-in">
+            <h2 class="text-4xl font-extralight uppercase tracking-[0.5em] mb-12 border-b border-stone-100 pb-8">beds</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"><div class="relative overflow-hidden rounded-[1.5rem] bg-stone-100 group aspect-square"><img src="photos/beds/bed1.webp" alt="bed1.webp" loading="lazy" class="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110"></div></div></section>
+        <section id="chairs" class="mb-32 fade-in">
+            <h2 class="text-4xl font-extralight uppercase tracking-[0.5em] mb-12 border-b border-stone-100 pb-8">chairs</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"><div class="relative overflow-hidden rounded-[1.5rem] bg-stone-100 group aspect-[3/4] lg:row-span-2"><img src="photos/chairs/chair1.jpg" alt="chair1.jpg" loading="lazy" class="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110"></div><div class="relative overflow-hidden rounded-[1.5rem] bg-stone-100 group aspect-[3/4] lg:row-span-2"><img src="photos/chairs/chair2.jpg" alt="chair2.jpg" loading="lazy" class="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110"></div><div class="relative overflow-hidden rounded-[1.5rem] bg-stone-100 group aspect-[3/4] lg:row-span-2"><img src="photos/chairs/chair3.jpg" alt="chair3.jpg" loading="lazy" class="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110"></div><div class="relative overflow-hidden rounded-[1.5rem] bg-stone-100 group aspect-[3/4] lg:row-span-2"><img src="photos/chairs/chair4.jpg" alt="chair4.jpg" loading="lazy" class="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110"></div></div></section>
+        <section id="interior" class="mb-32 fade-in">
+            <h2 class="text-4xl font-extralight uppercase tracking-[0.5em] mb-12 border-b border-stone-100 pb-8">interior</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"><div class="relative overflow-hidden rounded-[1.5rem] bg-stone-100 group aspect-[3/4] lg:row-span-2"><img src="photos/interior/interior.webp" alt="interior.webp" loading="lazy" class="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110"></div><div class="relative overflow-hidden rounded-[1.5rem] bg-stone-100 group aspect-video"><img src="photos/interior/interior2.jpg" alt="interior2.jpg" loading="lazy" class="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110"></div></div></section>
+        <section id="kitchen" class="mb-32 fade-in">
+            <h2 class="text-4xl font-extralight uppercase tracking-[0.5em] mb-12 border-b border-stone-100 pb-8">kitchen</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"><div class="relative overflow-hidden rounded-[1.5rem] bg-stone-100 group aspect-[3/4] lg:row-span-2"><video autoplay muted loop playsinline class="w-full h-full object-cover"><source src="photos/kitchen/kitchen-lift.mp4" type="video/mp4"></video></div></div></section>
+        <section id="materials" class="mb-32 fade-in">
+            <h2 class="text-4xl font-extralight uppercase tracking-[0.5em] mb-12 border-b border-stone-100 pb-8">materials</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"><div class="relative overflow-hidden rounded-[1.5rem] bg-stone-100 group aspect-video"><video autoplay muted loop playsinline class="w-full h-full object-cover"><source src="photos/materials/leather-tech.mp4" type="video/mp4"></video></div><div class="relative overflow-hidden rounded-[1.5rem] bg-stone-100 group aspect-video"><video autoplay muted loop playsinline class="w-full h-full object-cover"><source src="photos/materials/wood-tech.mp4" type="video/mp4"></video></div></div></section>
+        <section id="sofas" class="mb-32 fade-in">
+            <h2 class="text-4xl font-extralight uppercase tracking-[0.5em] mb-12 border-b border-stone-100 pb-8">sofas</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"><div class="relative overflow-hidden rounded-[1.5rem] bg-stone-100 group aspect-square"><video autoplay muted loop playsinline class="w-full h-full object-cover"><source src="photos/sofas/sofa-video.mp4" type="video/mp4"></video></div><div class="relative overflow-hidden rounded-[1.5rem] bg-stone-100 group aspect-[3/4] lg:row-span-2"><img src="photos/sofas/sofa1.jpg" alt="sofa1.jpg" loading="lazy" class="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110"></div><div class="relative overflow-hidden rounded-[1.5rem] bg-stone-100 group aspect-[3/4] lg:row-span-2"><img src="photos/sofas/sofa2.jpg" alt="sofa2.jpg" loading="lazy" class="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110"></div><div class="relative overflow-hidden rounded-[1.5rem] bg-stone-100 group aspect-[3/4] lg:row-span-2"><img src="photos/sofas/sofa3.jpg" alt="sofa3.jpg" loading="lazy" class="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110"></div><div class="relative overflow-hidden rounded-[1.5rem] bg-stone-100 group aspect-square"><img src="photos/sofas/sofa4.jpg" alt="sofa4.jpg" loading="lazy" class="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110"></div><div class="relative overflow-hidden rounded-[1.5rem] bg-stone-100 group aspect-[3/4] lg:row-span-2"><img src="photos/sofas/sofa5.jpg" alt="sofa5.jpg" loading="lazy" class="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110"></div><div class="relative overflow-hidden rounded-[1.5rem] bg-stone-100 group aspect-square"><img src="photos/sofas/sofa_cass.jpg" alt="sofa_cass.jpg" loading="lazy" class="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110"></div></div></section>
+        <section id="wardrobes" class="mb-32 fade-in">
+            <h2 class="text-4xl font-extralight uppercase tracking-[0.5em] mb-12 border-b border-stone-100 pb-8">wardrobes</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"><div class="relative overflow-hidden rounded-[1.5rem] bg-stone-100 group aspect-[3/4] lg:row-span-2"><img src="photos/wardrobes/wardrobe1.jpg" alt="wardrobe1.jpg" loading="lazy" class="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110"></div></div></section>
     </main>
-
-    <footer class="bg-stone-950 text-stone-600 py-24 text-center border-t border-stone-800">
-        <div class="container mx-auto px-6">
-            <h2 class="text-white text-3xl font-extralight tracking-[0.4em] mb-8 uppercase">South Bear Studio</h2>
-            <div class="h-px w-20 bg-amber-900 mx-auto mb-12 opacity-50"></div>
-            <p class="max-w-md mx-auto text-[10px] leading-relaxed uppercase tracking-widest opacity-30">
-                Guangzhou • Innovative Interiors • 2026
-            </p>
-        </div>
-    </footer>
-
     <script>
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('visible');
-            });
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
         }, { threshold: 0.1 });
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
     </script>
